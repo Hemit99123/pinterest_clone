@@ -1,0 +1,59 @@
+<div class="container">
+    <br>
+    <h1 class="text-center">
+        pinterest</h2>
+    </h1>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <br>
+    <form action="/" method="POST" enctype="multipart/form-data">
+
+        {{#if success}}
+        <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Your <strong>meal</strong> is Uploaded.
+        </div>
+        {{/if}}
+
+        <div class="form-group">
+            <label for="Select Image:">Add a picture <strong>required</strong></label>
+            <input type="file" name="image" class="form-control" id="">
+        </div>
+
+              <div class="form-group">
+            <label for="Select Image:">Name</label>
+            <input type="string" name="name" class="form-control" id="">
+        </div>
+
+           </div>
+
+              <div class="form-group">
+            <label for="Select Image:">Detail</label>
+            <input type="string" name="detail" class="form-control" id="">
+        </div>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-block btn-danger">
+                Post your meal
+            </button>
+        </div>
+    </form>
+
+       {{#each records}}
+
+    {{#each this}}
+    <div id="pinpin">
+    
+    <h3>{{this.tiffin}}</h3>
+
+    <img  src="{{this.imagename}}" class="img-thumbnail" />
+
+    <p>{{this.detail}}</p>
+    <div>
+
+    {{/each}}
+
+    {{/each}}
+
+</div>
+
